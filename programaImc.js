@@ -42,13 +42,13 @@ Suba o código para sua conta no GitHub e compartilhe o link desse projeto no ca
 */
 // inicializando as variáveis que serão necessárias para o código.
 var alunos = 0;
-var nome = []; // a lista é criada vazia pois seram acrescentados os valores a cada interação com o usuário
+var nome = []; // a lista é criada vazia pois serão acrescentados os valores a cada interação com o usuário
 var idade = [];
 var altura = [];
 var peso = [];
 var valorimc = [];
 
-//inicio do laço Do..While que será responsável pela entrada dos dados dos alunos, adicionando os valores nas variáveis correspondentes
+//inicio do laço Do...While que será responsável pela entrada dos dados dos alunos, adicionando os valores nas listas correspondentes
 do{
 	
 	var name = prompt('Qual o seu nome?');
@@ -61,16 +61,14 @@ do{
 	peso.push(weight);	// inclui o valor digitado pelo usyário na lista de pesos
 	var imc = weight / (height**2); // calcula o valor do imc 
 	var imc1 = imc.toFixed(2);  // fixa a quantidade de casas decimais no valor do imc
-	valorimc.push(imc1); // inclui o valor digitado pelo usyário na lista de valores de imc
+	valorimc.push(imc1); // inclui o valor digitado pelo usuário na lista de valores de imc
 	alert('Seu IMC é: '+ imc1)
 
-	alerta(); // chama a função que irá dizer ao usuário a classe em que está incluso de acordo com o valor do imc
+	alerta(); // chama a função que irá dizer ao usuário a classe em que ele está incluso de acordo com o valor do imc
 	alunos += 1; //incrementa o valor do contador de alunos ()
-
-}while(alunos <= 44); // condição para que o loop funcione, são 44 pois o '0'´conta como posição dentro da lista 
+}while(alunos <= 44); // condição para que o loop funcione, são 44 pois o '0'´conta como posição dentro da lista de alunos
 
 maiorMenor(); // chama a função que irá mostrar qual o menor e o maior valor de imc calculado durante o laço do...while
-
 mediaAltura(); // chama a função que irá mostrar qual a altura média de acordo com as idades inseridas durante o laço do...while
 
 function alerta(){    //função de emissão de alerta sobre a classificação do imc 
@@ -111,7 +109,7 @@ function maiorMenor(){ //função que encontra o maior e menor indice de imc cal
 
 function mediaAltura(){ //função que calcula a média das alturas inseridas na lista de alturas
 	var soma = 0; //primeiro vamos somar todos os valores da lista 
-	for(var x=0; x < altura.length; x++){ // a vaiavel x vai passar por cada uma das posições dentro da lista de altura 
+	for(var x=0; x < altura.length; x++){ // a variável x vai passar por cada uma das posições dentro da lista de altura 
 		soma += parseFloat(altura[x]); // a função 'parseFloat' é usada pois os valores inseridos no prompt durante o laço são armazenados como strings e queremos somar valores em números para o cálculo da média
 	} 
 	var media = soma / 45 ; //cálculo da média (aqui dividimos por 45 pois é a quantidade de alunos)
