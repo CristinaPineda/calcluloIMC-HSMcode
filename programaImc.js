@@ -104,7 +104,7 @@ function maiorMenor(){ //função que encontra o maior e menor indice de imc cal
 	        imcMenor = valorimc[i]; // o menor valor imc encontrado é atribuido à variável 'imcMenor' 
 	     }
 	}
-	document.write('O maior IMC calculado é: '+ imcMaior, ' e o menor IMC calculado é: '+ imcMenor +'.');
+	document.write('O maior IMC calculado é: '+ imcMaior, '<br> O menor IMC calculado é: '+ imcMenor +'.');
 }
 
 function mediaAltura(){ //função que calcula a média das alturas inseridas na lista de alturas
@@ -114,7 +114,7 @@ function mediaAltura(){ //função que calcula a média das alturas inseridas na
 	} 
 	var media = soma / 45 ; //cálculo da média (aqui dividimos por 45 pois é a quantidade de alunos)
 	var mediaDaAltura = media.toFixed(2); //fixa a quantidade de números decimais
-	document.write('\nA altura média dos alunos é: '+ mediaDaAltura); 
+	document.write('<br> A altura média dos alunos é: '+ mediaDaAltura); 
 }
 
 //Cristina Pineda.
